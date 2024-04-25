@@ -1,5 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Box, AppBar, Toolbar, IconButton, Typography } from "@mui/material";
+import {
+  Box,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Stack,
+  Button,
+} from "@mui/material";
 import { AccountBalance } from "@mui/icons-material";
 
 const MuiAppBar = () => {
@@ -25,13 +33,17 @@ const MuiAppBar = () => {
       setAppBarposition("relative");
     }
   }
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   });
   return (
     <Box>
-      <AppBar ref={appBarRef} sx={{ position: AppBarposition }}>
-        <Toolbar>
+      <AppBar ref={appBarRef} sx={{ position: AppBarposition }} display="flex">
+        <Toolbar bgcolor="success">
           <IconButton aria-label="app-logo" size="large" edge="start">
             <AccountBalance />
           </IconButton>
@@ -39,6 +51,17 @@ const MuiAppBar = () => {
             App Bar
           </Typography>
         </Toolbar>
+        <Stack direction="row" spacing={3}>
+          <Button variant="text" color="secondary">
+            Featured
+          </Button>
+          <Button variant="text" color="secondary">
+            Setting
+          </Button>
+          <Button variant="text" color="secondary">
+            Login
+          </Button>
+        </Stack>
       </AppBar>
     </Box>
   );

@@ -1,10 +1,17 @@
 import "./App.css";
 import MuiAccordion from "./components/Accordin/MuiAccordion";
-import MuiAppBar from "./components/Layouts/MuiAppBar";
+import MuiBotNav from "./components/BottomNavigator/MuiBotNav";
+// import MuiAppBar from "./components/Layouts/MuiAppBar";
 import MuiCard from "./components/Layouts/MuiCard";
+import MuiDrawer from "./components/Layouts/MuiDrawer";
 // import MuiAutocomplete from "./components/Autocomplete/MuiAutocomplete";
-import MuiGrid from "./components/Layouts/MuiGrid";
+// import MuiGrid from "./components/Layouts/MuiGrid";
+import MuiSpeedDial from "./components/Layouts/MuiSpeedDial";
+import MuiAvatar from "./components/Media/MuiAvatar";
+import MuiBadge from "./components/Media/MuiBadge";
 import MuiImageList from "./components/Media/MuiImageList";
+import MuiBreadcrumbs from "./components/Menu/MuiBreadcrumbs";
+import MuiMenu from "./components/Menu/MuiMenu";
 // import MuiRating from "./components/Rating/MuiRating";
 // import MuiSwitch from "./components/Switches/MuiSwitch";
 // import MuiCheckbox from "./components/Buttons/MuiCheckbox";
@@ -18,8 +25,8 @@ function App() {
     <div className="App">
       <MuiCard />
       <h1>Welcome to my web</h1>
-      <MuiAppBar />
-
+      <MuiBotNav />
+      <MuiDrawer />
       {/* <MuiToggleButton />
       <MuiTextField />
       <MuiSelect />
@@ -28,9 +35,14 @@ function App() {
       {/* <MuiSwitch />
       <MuiRating />
       <MuiAutocomplete /> */}
-      <MuiGrid />
+      <MuiMenu />
+      {/* <MuiGrid /> */}
       <MuiAccordion />
       <MuiImageList />
+      <MuiSpeedDial />
+      <MuiBreadcrumbs />
+      <MuiAvatar />
+      <MuiBadge />
     </div>
   );
 }
